@@ -39,4 +39,12 @@ window.onload = function() {
   increaseFontSize.onclick = function() {
     body.style.fontSize = "20px";
   }
+
+  body.onmouseover = function() {
+    body.style.backgroundColor = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ")";
+  }
+
+  body.onmouseleave = function() {
+    body.style.color = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ")";
+  }
 }

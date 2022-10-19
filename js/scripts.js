@@ -29,4 +29,14 @@ window.onload = function() {
     body.style.backgroundColor = "black";
     body.style.color = "white";
   }
+
+  let defaultFontSize = document.querySelector(".default-fontSize");
+  defaultFontSize.onclick = function() {
+    body.style.fontSize = "16px";
+  }
+
+  let increaseFontSize = document.querySelector(".increase-fontSize");
+  increaseFontSize.onclick = function() {
+    body.style.fontSize = "20px";
+  }
 }

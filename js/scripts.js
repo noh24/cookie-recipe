@@ -40,11 +40,13 @@ window.onload = function() {
     body.style.fontSize = "20px";
   }
 
-  body.onmouseover = function() {
-    body.style.backgroundColor = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ")";
-  }
 
-  body.onmouseleave = function() {
+  //add event listener for mouse over event to change background and color
+  body.addEventListener("mouseover", function() {
     body.style.color = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ")";
-  }
+  });
+
+  body.addEventListener("mouseover", function() {
+    body.style.backgroundColor = "rbg(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ")";
+  });
 }

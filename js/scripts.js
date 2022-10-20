@@ -1,9 +1,13 @@
 //user interface logic
-//declare function that changes background color randomly
+//declare function that changes background color randomly and then removes the event listener
 function randomBgColor() {
   document.querySelector("body").style.backgroundColor = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 225) + ")";
+  document.querySelector("body").removeEventListener("mouseover", randomBgColor);
 }
-
+//function that changes color property randomly
+function randomColor() {
+  document.querySelector("body").style.color = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 225) + ")";
+}
 window.onload = function() {
   let body = document.querySelector("body");
 
@@ -31,9 +35,7 @@ window.onload = function() {
 
 
   //add event listener for mouse over event to change background and color
-  // body.addEventListener("mouseover", function() {
-  //   body.style.color = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ")";
-  // });
 
-  body.addEventListener("mouseover", randomBgColor)
+  body.addEventListener("mouseover", randomBgColor);
+  body.addEventListener("mouseover", randomColor);
 }

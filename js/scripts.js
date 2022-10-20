@@ -1,19 +1,8 @@
-// window.onload = function() {
-//   let h1 = document.querySelector("h1");
-//   h1.onmouseover = function() {
-//     alert("I'm a heading");
-//   };
-
-// let p = document.querySelector("p");
-//   p.onmouseover = function() {
-//     document.querySelector("p>em").innerText = "I've changed!";
-//   };
-
-// let img = document.querySelector("img");
-//   img.onmouseover = function() {
-//     img.style.width = "700px";
-//   };
-// }
+//user interface logic
+//declare function that changes background color randomly
+function randomBgColor() {
+  document.querySelector("body").style.backgroundColor = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 225) + ")";
+}
 
 window.onload = function() {
   let body = document.querySelector("body");
@@ -42,11 +31,9 @@ window.onload = function() {
 
 
   //add event listener for mouse over event to change background and color
-  body.addEventListener("mouseover", function() {
-    body.style.color = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ")";
-  });
+  // body.addEventListener("mouseover", function() {
+  //   body.style.color = "rgb(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ")";
+  // });
 
-  body.addEventListener("mouseover", function() {
-    body.style.backgroundColor = "rbg(" + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + "," + Math.round(Math.random() * 255) + ")";
-  });
+  body.addEventListener("mouseover", randomBgColor)
 }
